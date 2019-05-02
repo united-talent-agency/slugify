@@ -187,13 +187,13 @@ describe('slugify', function () {
 
   it('replace currencies', function () {
     var charMap = {
-      '€': 'euro', '₢': 'cruzeiro', '₣': 'french franc', '£': 'pound',
+      '€': 'euro', '₢': 'cruzeiro', '₣': 'ranc', '£': 'pound',
       '₤': 'lira', '₥': 'mill', '₦': 'naira', '₧': 'peseta', '₨': 'rupee',
-      '₩': 'won', '₪': 'new shequel', '₫': 'dong', '₭': 'kip', '₮': 'tugrik',
+      '₩': 'won', '₪': 'shequel', '₫': 'dong', '₭': 'kip', '₮': 'tugrik',
       '₯': 'drachma', '₰': 'penny', '₱': 'peso', '₲': 'guarani', '₳': 'austral',
       '₴': 'hryvnia', '₵': 'cedi', '¢': 'cent', '¥': 'yen', '元': 'yuan',
       '円': 'yen', '﷼': 'rial', '₠': 'ecu', '¤': 'currency', '฿': 'baht',
-      '$': 'dollar', '₽': 'russian ruble', '₿': 'bitcoin'
+      '$': 's', '₽': 'ruble', '₿': 'bitcoin'
     }
     for (var ch in charMap) {
       charMap[ch] = charMap[ch].replace(' ', '-')
@@ -203,7 +203,7 @@ describe('slugify', function () {
 
   it('replace symbols', function () {
     var charMap = {
-      '©': '(c)', 'œ': 'oe', 'Œ': 'OE', '∑': 'sum', '®': '(r)', '†': '+',
+      '©': 'c', 'œ': 'oe', 'Œ': 'OE', '∑': 'sum', '®': 'r', '†': '+',
       '“': '"', '”': '"', '‘': "'", '’': "'", '∂': 'd', 'ƒ': 'f', '™': 'tm',
       '℠': 'sm', '…': '...', '˚': 'o', 'º': 'o', 'ª': 'a', '•': '*',
       '∆': 'delta', '∞': 'infinity', '♥': 'love', '&': 'and', '|': 'or',
