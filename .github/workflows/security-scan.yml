@@ -1,0 +1,13 @@
+
+name: Initial Snyk Scan
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  snyk:
+    uses: united-talent-agency/cicd/.github/workflows/standard-security-ci-template.yml@main
+    secrets: inherit
