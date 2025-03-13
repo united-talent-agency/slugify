@@ -4,7 +4,6 @@ name: Initial Snyk Scan
 on:
   push:
     branches:
-      - main
       - master
 
 jobs:
